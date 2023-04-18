@@ -4,6 +4,8 @@
  */
 package Révisions;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Sklaerenn
@@ -27,8 +29,68 @@ public class Exercice12 {
         */
         
         
+        saisie();
+        
+    }
+    
+    static boolean valide(String sequence){
+        
+        boolean valide = true;
+        int i = 0;
+        String[] st = sequence.split("");
+        
+        if(sequence.isEmpty()){
+            valide = false; 
+        } 
+        
+        while(i < st.length  && valide != false){
+            if (st[i].compareTo("a") != 0 && st[i].compareTo("t") != 0 && st[i].compareTo("g") != 0 && st[i].compareTo("c") != 0){
+                valide = false;
+            } i++;
+        }       
+        return valide;
+    }
+    
+    static void saisie(){
+        Scanner sc = new Scanner(System.in);
+        String sequence = new String();
+        
+        System.out.println("Entrez une séquence");
+        sequence = sc.nextLine();
+        
+        if(!valide(sequence)){
+            System.out.println("Erreur dans la séquence entrée");
+        } else {
+            occurences(sequence);      
+        }
+        
+    }
+    
+    static void occurences(String sequence){
+        
+        int cptA=0, cptT=0, cptG=0, cptC=0;
+        
+        String[] st = sequence.split("");
+        
+        for(int i=0; i < st.length; i++){
+            if(st[i].equalsIgnoreCase("a")){
+                cptA = cptA + 1;
+            } else if (st[i].equalsIgnoreCase("t")){
+                cptT = cptT + 1;
+            } else if (st[i].equalsIgnoreCase("g")){
+                cptG = cptG + 1;
+            } else if (st[i].equalsIgnoreCase("c")){
+                cptC = cptC + 1;
+            }    
+        }
+        
+        System.out.println("Il y a "+cptA+" a dans la séquence");
+        System.out.println("Il y a "+cptT+" t dans la séquence");
+        System.out.println("Il y a "+cptG+" g dans la séquence");
+        System.out.println("Il y a "+cptC+" c dans la séquence");
         
         
     }
+    
     
 }
