@@ -72,15 +72,14 @@ public class Exercice9 {
     
     static void solution(int delta, int a, int b, int c){
         
-        double resultat, x1, x2;
-        resultat = 0;
-        
         if(delta < 0){
-            System.out.println("Erreur, il n'y a pas de solution réelle");
+            System.out.println("Il n'y a pas de solution réelle");
         } else if(delta == 0){
             System.out.println((-b / 2*a));
         } else {
+            System.out.println("Première solution : ");
             System.out.println((-b + Math.sqrt(delta))/2*a);
+            System.out.println("Seconde solution : ");
             System.out.println((-b - Math.sqrt(delta))/2*a);
         }
         
