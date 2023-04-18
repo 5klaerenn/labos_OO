@@ -30,37 +30,34 @@ public class Exercice9 {
          * 4. La méthode Java permettant de calculer des racines carrées s'appelle sqrt() de la classe
          * Math → Math.sqrt().
          */
-        
+        Scanner sc = new Scanner(System.in);
+
         int a, b, c, delta; 
         
         System.out.println("Entrez un premier nombre");
-        a = estEntier();
+        a = estNonNul();
         System.out.println("Entrez un second nombre");
-        b = estEntier();
+        b = sc.nextInt();
         System.out.println("Entrez un troisième nombre");
-        c = estEntier();
+        c = sc.nextInt();
         
         delta = discriminant(a,b,c);
         
         System.out.println(delta);
         solution(delta, a, b, c);
         
-        
-        
-        
-       
     }
 
-    static int estEntier(){    
+    static int estNonNul(){    
 
        Scanner sc = new Scanner(System.in);
-       int test;
+       int test = sc.nextInt();
 
-       while(!sc.hasNextInt()){
-              System.out.println("Erreur, entrez un entier positif");
-                sc.next();
+       while(test == 0){
+              System.out.println("Erreur, le nombre ne peut être nul");
+                test = sc.nextInt();
             } 
-       return test = sc.nextInt();
+       return test;
    }
     
     static int discriminant(int a, int b, int c){
