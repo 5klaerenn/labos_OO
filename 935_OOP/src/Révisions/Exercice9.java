@@ -32,54 +32,53 @@ public class Exercice9 {
          */
         Scanner sc = new Scanner(System.in);
 
-        int a, b, c, delta; 
+        double a, b, c, delta; 
         
         System.out.println("Entrez un premier nombre");
         a = estNonNul();
         System.out.println("Entrez un second nombre");
-        b = sc.nextInt();
+        b = sc.nextDouble();
         System.out.println("Entrez un troisième nombre");
-        c = sc.nextInt();
+        c = sc.nextDouble();
         
         delta = discriminant(a,b,c);
         
         System.out.println(delta);
-        solution(delta, a, b, c);
+        solution(delta, a, b);
         
     }
 
-    static int estNonNul(){    
+    static double estNonNul(){    
 
        Scanner sc = new Scanner(System.in);
-       int test = sc.nextInt();
+       double test = sc.nextDouble();
 
        while(test == 0){
               System.out.println("Erreur, le nombre ne peut être nul");
-                test = sc.nextInt();
+                test = sc.nextDouble();
             } 
        return test;
    }
     
-    static int discriminant(int a, int b, int c){
-        int delta;
+    static double discriminant(double a, double b, double c){
+        double delta;
         
-        delta = b*b - 4*a*c;
+        delta = b*b - 4.0*a*c;
         return delta;      
     }
     
-    static void solution(int delta, int a, int b, int c){
+    static void solution(double delta, double a, double b){
         
-        if(delta < 0){
+        if(delta < 0.0){
             System.out.println("Il n'y a pas de solution réelle");
-        } else if(delta == 0){
-            System.out.println((-b / 2*a));
-        } else {
+        } else if(delta > 0.0){
             System.out.println("Première solution : ");
-            System.out.println((-b + Math.sqrt(delta))/2*a);
+            System.out.println((-b + Math.sqrt(delta))/2.0*a);
             System.out.println("Seconde solution : ");
-            System.out.println((-b - Math.sqrt(delta))/2*a);
+            System.out.println((-b - Math.sqrt(delta))/2.0*a);
+        } else {
+            System.out.println((-b / 2*a));
         }
-        
     }
     
 }
