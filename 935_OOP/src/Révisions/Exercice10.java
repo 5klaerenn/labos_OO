@@ -4,6 +4,8 @@
  */
 package Révisions;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Sklaerenn
@@ -34,6 +36,61 @@ public class Exercice10 {
         • Affichez les informations du travailleur en utilisant la bonne fonction
         */
         
+        Scanner sc = new Scanner(System.in);
+        boolean continuer = true;
+        String nom = new String();
+        double heures, salaireHoraire, salaire;
+        salaireHoraire = 25.0;
+        
+        do {            
+            System.out.println("Entrez le nom du travailleur");
+            nom = sc.nextLine();
+            
+            heures = 20.0 + Math.random()*(51.00-20.0);
+            salaire = calculerSalaire(heures, salaireHoraire);
+                    
+            
+            afficherInformations(nom, heures, salaire);
+            
+            continuer = keepGoing();
+            
+        } while (continuer == true);
+
+        
     }
     
+    static void afficherInformations(String nom, double heures, double salaire){
+        System.out.println("**********************************");
+        System.out.println("* Nom : "+nom);
+        System.out.printf("%s %.2f %s", "* Heures :",heures, "heures \n");
+        System.out.printf("%s %.2f %s", "* Salaire : ",salaire, "$\n");
+        System.out.println("**********************************");
+    }
+    
+    static double calculerSalaire(double heures, double salaire){
+        double result, sup;
+        
+        if(heures < 40){
+            result = heures*salaire;
+        } else {
+             sup = heures - 40;
+             result = (salaire*40) + ((salaire*1.5)*sup);
+        }
+        
+        return result;
+    }
+    
+    static boolean keepGoing(){
+        
+        Scanner sc = new Scanner(System.in);
+        String test;
+        Boolean reponse;
+        
+        System.out.println("Voulez-vous continuer ? oui/non");
+        test = sc.next();
+        
+        reponse = test.equalsIgnoreCase("oui");
+       
+        return reponse;
+    }
 }
