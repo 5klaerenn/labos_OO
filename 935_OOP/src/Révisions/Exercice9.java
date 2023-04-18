@@ -4,6 +4,8 @@
  */
 package Révisions;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Sklaerenn
@@ -28,6 +30,59 @@ public class Exercice9 {
          * 4. La méthode Java permettant de calculer des racines carrées s'appelle sqrt() de la classe
          * Math → Math.sqrt().
          */
+        
+        int a, b, c, delta; 
+        
+        System.out.println("Entrez un premier nombre");
+        a = estEntier();
+        System.out.println("Entrez un second nombre");
+        b = estEntier();
+        System.out.println("Entrez un troisième nombre");
+        c = estEntier();
+        
+        delta = discriminant(a,b,c);
+        
+        System.out.println(delta);
+        solution(delta, a, b, c);
+        
+        
+        
+        
+       
+    }
+
+    static int estEntier(){    
+
+       Scanner sc = new Scanner(System.in);
+       int test;
+
+       while(!sc.hasNextInt()){
+              System.out.println("Erreur, entrez un entier positif");
+                sc.next();
+            } 
+       return test = sc.nextInt();
+   }
+    
+    static int discriminant(int a, int b, int c){
+        int delta;
+        
+        delta = b*b - 4*a*c;
+        return delta;      
+    }
+    
+    static void solution(int delta, int a, int b, int c){
+        
+        double resultat, x1, x2;
+        resultat = 0;
+        
+        if(delta < 0){
+            System.out.println("Erreur, il n'y a pas de solution réelle");
+        } else if(delta == 0){
+            System.out.println((-b / 2*a));
+        } else {
+            System.out.println((-b + Math.sqrt(delta))/2*a);
+            System.out.println((-b - Math.sqrt(delta))/2*a);
+        }
         
     }
     
