@@ -26,21 +26,20 @@ public class Exercice11 {
     */
         int tab[] = new int[5];
         boolean logged = true;
-        int choix = menu();
+        int choix = 0;
         
-        do{   
+        do{ 
+            choix = menu();
+            
             switch(choix){
                 case 1 :
                     afficherTab(tab);
-                    choix = menu();
                     break;
                 case 2 : 
                     remplirTab(tab);
-                    choix = menu();
                     break;
                 case 3 : 
                     modifierTab(tab);
-                    choix = menu();
                     break;
                 case 4 : 
                     System.out.println("Merci d'avoir utilisé le programme.");
@@ -48,7 +47,6 @@ public class Exercice11 {
                     break;
                 default:
                     System.out.println("Erreur");
-                    choix = menu();
                     break;
             } 
         } while (logged != false);
