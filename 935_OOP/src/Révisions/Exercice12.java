@@ -53,7 +53,7 @@ public class Exercice12 {
     
     static void saisie(){
         Scanner sc = new Scanner(System.in);
-        String sequence = new String();
+        String sequence;
         
         System.out.println("Entrez une séquence");
         sequence = sc.nextLine();
