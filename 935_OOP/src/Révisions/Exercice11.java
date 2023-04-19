@@ -64,6 +64,12 @@ public class Exercice11 {
         System.out.println("Faites votre choix") ;
         
         int choix = sc.nextInt() ;
+        
+        while(choix != 1 && choix != 2 && choix != 3 && choix != 4){
+            System.out.println("Erreur. Les choix possibles sont 1, 2, 3 ou 4. Réessayez");
+            choix = sc.nextInt();
+        }
+        
         return choix ;
     }
 
