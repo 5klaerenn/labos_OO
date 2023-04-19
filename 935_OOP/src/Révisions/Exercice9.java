@@ -43,7 +43,6 @@ public class Exercice9 {
         
         delta = discriminant(a,b,c);
         
-        System.out.println(delta);
         solution(delta, a, b);
         
     }
