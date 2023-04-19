@@ -37,14 +37,13 @@ public class Exercice12 {
         
         boolean valide = true;
         int i = 0;
-        String[] st = sequence.split("");
         
         if(sequence.isEmpty()){
             valide = false; 
         } 
         
-        while(i < st.length  && valide){
-            if (st[i].compareTo("a") != 0 && st[i].compareTo("t") != 0 && st[i].compareTo("g") != 0 && st[i].compareTo("c") != 0){
+        while(i < sequence.length() && valide){
+            if (sequence.charAt(i)!= 'a' && sequence.charAt(i)!= 't' && sequence.charAt(i)!= 'g' && sequence.charAt(i)!= 'c'){
                 valide = false;
             } i++;
         }       
