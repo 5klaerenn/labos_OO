@@ -43,7 +43,7 @@ public class Exercice12 {
             valide = false; 
         } 
         
-        while(i < st.length  && valide != false){
+        while(i < st.length  && valide){
             if (st[i].compareTo("a") != 0 && st[i].compareTo("t") != 0 && st[i].compareTo("g") != 0 && st[i].compareTo("c") != 0){
                 valide = false;
             } i++;
