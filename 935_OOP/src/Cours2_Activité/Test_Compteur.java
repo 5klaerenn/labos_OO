@@ -27,6 +27,7 @@ public class Test_Compteur {
         
         cpt2.aZero();
         cpt2.incrementer();
+        cpt2.afficher();
         cpt2.decrementer();
         cpt2.afficher();
         

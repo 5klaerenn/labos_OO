@@ -8,26 +8,23 @@ package Cours2_Labo;
  *
  * @author Sklaerenn
  */
-public class ComptesBancaires {
+public class DemoDe {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        Compte compte1 = new Compte("Jean", 5600);
-        Compte compte2 = new Compte("Martin", 1200);
+        int lancers = 5;
         
-        compte1.deposer(500);
-        compte2.deposer(1000);
-        compte2.retirer(10);
-        compte1.virerVers(75, compte2);
+        De de20 = new De(20);
         
-        compte1.afficher();
-        compte2.afficher();
-        
-        
-        
+        for(int i = 0; i<lancers; i++){
+            de20.lancerDe();
+            System.out.println(de20.getFacette());
+        }
+
+
     }
     
 }

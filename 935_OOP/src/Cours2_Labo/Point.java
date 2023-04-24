@@ -9,7 +9,10 @@ import Cours2_Activité.*;
 public class Point {
     
     private double x;
-    private double y; 
+    private double y;
+    public static int cpteur = 0;
+
+
     
     public Point(double a, double b)
     {
@@ -22,6 +25,16 @@ public class Point {
         x = 0;
         y = 0;
     }
+        
+    public void afficher()
+    {
+        System.out.println("x: "+x + " y: "+y);
+    }
+    
+    public void afficherCompteur()
+    {
+        System.out.println("compteur: "+ cpteur);
+    }   
 
 
 }
