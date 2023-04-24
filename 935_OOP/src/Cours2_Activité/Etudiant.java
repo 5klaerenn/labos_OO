@@ -6,7 +6,8 @@ package Cours2_Activité;
  */
 public class Etudiant {
     
-    private String numero, nom;
+    private String numero;
+    private String nom;
     private double note; 
     
     public Etudiant()

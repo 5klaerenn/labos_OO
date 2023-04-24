@@ -8,7 +8,7 @@ package Cours2_Activité;
  *
  * @author Sklaerenn
  */
-public class Test {
+public class Test_Etudiant {
 
     /**
      * @param args the command line arguments

@@ -1,4 +1,6 @@
-package Cours2_Activité;
+package Cours2_Labo;
+
+import Cours2_Activité.*;
 
 /**
  *
