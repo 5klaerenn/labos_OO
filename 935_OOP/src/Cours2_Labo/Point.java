@@ -18,12 +18,14 @@ public class Point {
     {
         x = a;
         y = b;
+        cpteur++;
     }
     
     public Point()
     {
         x = 0;
         y = 0;
+        cpteur++;
     }
         
     public void afficher()
@@ -31,10 +33,4 @@ public class Point {
         System.out.println("x: "+x + " y: "+y);
     }
     
-    public void afficherCompteur()
-    {
-        System.out.println("compteur: "+ cpteur);
-    }   
-
-
 }

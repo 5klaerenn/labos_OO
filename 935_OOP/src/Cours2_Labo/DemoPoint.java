@@ -23,6 +23,7 @@ public class DemoPoint {
         point2.afficher();
         point3.afficher();
         
+        System.out.println("Nombre de points créés: "+Point.cpteur);
     }
     
 }
