@@ -1,4 +1,4 @@
-package Cours2_Activité;
+package Cours2.Activité;
 
 /**
  *
