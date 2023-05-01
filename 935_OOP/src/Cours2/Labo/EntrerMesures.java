@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package Cours2_Labo;
+package Cours2.Labo;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Sklaerenn
  */
-public class DemoMesure {
+public class EntrerMesures {
 
     /**
      * @param args the command line arguments
