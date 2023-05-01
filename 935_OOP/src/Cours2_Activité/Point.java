@@ -22,8 +22,7 @@ public class Point {
     
     public Point()
     {
-        x = 0;
-        y = 0;
+        this(0,0);
     }
 
     public void afficher()
