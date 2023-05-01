@@ -32,4 +32,24 @@ public class Produit {
         prix = 1.0;
     }
     
+    public String getNoRef(){
+        return noRef;
+    }
+    public String getDesignation(){
+        return designation;
+    }
+    public double getPrix(){
+        return prix;
+    }
+    
+    public void setNoRef(String noRef){
+        this.noRef = noRef;
+    }   
+    public void setNom(String designation){
+        this.designation = designation;
+    }  
+    public void setNote(double prix){
+        this.prix = prix;
+    }
+    
 }
