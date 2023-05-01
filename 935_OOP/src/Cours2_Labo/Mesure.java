@@ -10,18 +10,28 @@ package Cours2_Labo;
  */
 public class Mesure {
     
-    //définir l'attribut d'instance
+    private int valeur;  
     
-    //définir les attributs de classe
+    private static int NbMesures = 0;
+    private static int SomMesures = 0;
     
-    //définir les constantes
     
-    public mesure (int val){
-        
+    public Mesure (int val){
+        if(val > -100 && val < 100){
+            this.valeur = val;
+            NbMesures++;
+            SomMesures = SomMesures + valeur;
+        } else {
+            System.out.println("mesure hors intervalle");
+        }
     }
     
     public static void afficherMoyenne(){
-        
+        if(NbMesures == 0){
+            System.out.println("zéro mesures");
+        } else {
+            System.out.println("Moyenne des "+NbMesures+" mesures est : "+(SomMesures/NbMesures));
+        }
     }
             
     
