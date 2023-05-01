@@ -15,9 +15,13 @@ public class Mesure {
     private static int NbMesures = 0;
     private static int SomMesures = 0;
     
+    public final static int min = -101;
+    public final static int max = 101;
+    
+    
     
     public Mesure (int val){
-        if(val > -100 && val < 100){
+        if(val > min && val < max){
             this.valeur = val;
             NbMesures++;
             SomMesures = SomMesures + valeur;

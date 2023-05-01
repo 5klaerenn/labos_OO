@@ -17,7 +17,12 @@ public class DemoPoint {
 
         //Création des deux premiers points
         Point pointOrigine = new Point();
+        System.out.println("Coordonnées du point d'origine :");
+        pointOrigine.afficher();
         Point point1 = new Point(4, 10);
+        System.out.println("Coordonnées de p1 :");
+        point1.afficher();
+        
         
         //Création de deux points suppl. 
         Point point2 = new Point(12, 5);

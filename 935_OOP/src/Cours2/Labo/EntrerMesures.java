@@ -22,7 +22,7 @@ public class EntrerMesures {
         Scanner sc = new Scanner(System.in);
         
         do {
-            System.out.println("Entrez une mesure :");
+            System.out.print("Entrez une mesure : ");
             valeur = sc.nextInt();
             if (valeur!=0){
                 mes = new Mesure(valeur);
