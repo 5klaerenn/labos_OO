@@ -15,12 +15,12 @@ public class Produit {
     private double prix; 
 
     public Produit(){
-        noRef = " ";
-        designation = " ";
+        noRef = "";
+        designation = "";
         prix = 1.0;
     }
     
-    public Produit(String noRef, String designation, int prix ){
+    public Produit(String noRef, String designation, double prix ){
         this.noRef = noRef;
         this.designation = designation;
         this.prix = prix;
@@ -45,11 +45,24 @@ public class Produit {
     public void setNoRef(String noRef){
         this.noRef = noRef;
     }   
-    public void setNom(String designation){
+    public void setDesignation(String designation){
         this.designation = designation;
     }  
-    public void setNote(double prix){
+    public void setPrix(double prix){
         this.prix = prix;
     }
     
+    public String versString(){
+        return "Ref: "+noRef+", Nom : "+designation+" prix : "+prix;
+    }
+    
+    public static void estEqual(Produit p1, Produit p2){
+        if(p1.versString().equals(p2.versString())){
+            System.out.println("Les produits sont les mêmes");
+        } else {
+            System.out.println("Les produits sont différents");
+        }
+    }
 }
+
+
