@@ -9,10 +9,15 @@ public class Point {
     private double x;
     private double y; 
     
-    public Point(double a, double b)
+    public Point(double x, double y)
     {
-        x = a;
-        y = b;
+        this.x = x;
+        this.y = y;
+    }
+    
+    public Point(Point p){
+        x = p.x;
+        y = p.y;
     }
     
     public Point()
@@ -21,5 +26,9 @@ public class Point {
         y = 0;
     }
 
-
+    public void afficher()
+    {
+        System.out.println("x: "+x + " y: "+y);
+    }
+    
 }
