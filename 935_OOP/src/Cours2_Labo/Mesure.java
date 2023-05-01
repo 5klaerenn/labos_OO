@@ -10,6 +10,20 @@ package Cours2_Labo;
  */
 public class Mesure {
     
+    //définir l'attribut d'instance
+    
+    //définir les attributs de classe
+    
+    //définir les constantes
+    
+    public mesure (int val){
+        
+    }
+    
+    public static void afficherMoyenne(){
+        
+    }
+            
     
     
 }
