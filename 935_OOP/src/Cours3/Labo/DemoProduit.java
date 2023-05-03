@@ -16,16 +16,16 @@ public class DemoProduit {
     public static void main(String[] args) {
 
         Produit p1 = new Produit();
-        System.out.println("Ref: "+p1.getNoRef()+", Nom : "+p1.getDesignation()+" prix : "+p1.getPrix());
+        System.out.println(p1);
         
         Produit p2 = new Produit("123A", "Chaise", 59.99);
-        System.out.println("Ref: "+p2.getNoRef()+", Nom : "+p2.getDesignation()+" prix : "+p2.getPrix());
+        System.out.println(p2);
         
         Produit p3 = new Produit("456B", "Fauteuil", 129.39);
-        System.out.println("Ref: "+p3.getNoRef()+", Nom : "+p3.getDesignation()+" prix : "+p3.getPrix());
+        System.out.println(p3);
         
         Produit p4 = new Produit("000CH", "Canapé", 399.79);
-        System.out.println("Ref: "+p4.getNoRef()+", Nom : "+p4.getDesignation()+" prix : "+p4.getPrix());
+        System.out.println(p4);
         
         System.out.println("");
         
@@ -42,10 +42,10 @@ public class DemoProduit {
         System.out.println("");
         
         System.out.println("Comparaison des produits p1 et p3 : ");
-        Produit.estEqual(p1, p3);
+        Produit.isEqual(p1, p3);
         
         System.out.println("Comparaison des produits p1 et p4 : ");
-        Produit.estEqual(p1, p4);
+        Produit.isEqual(p1, p4);
         
 
     }

@@ -52,12 +52,13 @@ public class Produit {
         this.prix = prix;
     }
     
-    public String versString(){
+    @Override
+    public String toString(){
         return "Ref: "+noRef+", Nom : "+designation+" prix : "+prix;
     }
     
-    public static void estEqual(Produit p1, Produit p2){
-        if(p1.versString().equals(p2.versString())){
+    public static void isEqual(Produit p1, Produit p2){
+        if(p1.toString().equals(p2.toString())){
             System.out.println("Les produits sont les mêmes");
         } else {
             System.out.println("Les produits sont différents");
