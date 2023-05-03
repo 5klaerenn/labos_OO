@@ -57,13 +57,24 @@ public class Produit {
         return "Ref: "+noRef+", Nom : "+designation+" prix : "+prix;
     }
     
-    public static void isEqual(Produit p1, Produit p2){
-        if(p1.toString().equals(p2.toString())){
-            System.out.println("Les produits sont les mêmes");
-        } else {
-            System.out.println("Les produits sont différents");
-        }
-    }
+    @Override
+   public boolean equals(Object obj){
+       if(obj instanceof Produit){
+           
+           Produit autre = (Produit) obj;
+           
+           if(this.noRef.equals(autre.noRef) && 
+                this.designation.equals(autre.designation)&& 
+                this.prix == autre.prix){
+              return true;
+           } else{
+                   return false; 
+                   }
+       } else 
+           return false;
+   }
+    
+
 }
 
 

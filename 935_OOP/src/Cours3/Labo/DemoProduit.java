@@ -41,11 +41,12 @@ public class DemoProduit {
         System.out.println("Nouveau prix de p1 : "+p1.getPrix());
         System.out.println("");
         
-        System.out.println("Comparaison des produits p1 et p3 : ");
-        Produit.isEqual(p1, p3);
+        System.out.println("p1 = p2 ?");
+        System.out.println(p1.equals(p2));
         
-        System.out.println("Comparaison des produits p1 et p4 : ");
-        Produit.isEqual(p1, p4);
+        System.out.println("p1 = p4 ?");
+        System.out.println(p1.equals(p4));
+        
         
 
     }
