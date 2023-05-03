@@ -19,12 +19,20 @@ public class DemoRectangle {
         
         Rectangle r2 = new Rectangle(13, 6);
         
-        System.out.println("r1 = r2 ?");
-        System.out.println(r1.equals(r2));
+        if(r1.equals(r2)){
+            System.out.println("Les deux rectangles ont la même largeur");
+        } else {
+            System.out.println("Les deux rectangles n'ont pas la même largeur");
+        }
         
         r1 = r2;
-        System.out.println("r1 = r2 ?");
-        System.out.println(r1.equals(r2));
+        
+        if(r1.equals(r2)){
+            System.out.println("Les deux rectangles ont la même largeur");
+        } else {
+            System.out.println("Les deux rectangles n'ont pas la même largeur");
+        }
+
         
 
     }
