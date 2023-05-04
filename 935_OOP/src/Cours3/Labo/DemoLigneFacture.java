@@ -15,10 +15,24 @@ public class DemoLigneFacture {
      */
     public static void main(String[] args) {
         
-        LigneFacture l1, l2;
-        
+        Produit p1 = new Produit("123A", "Chaise", 59.99);
+        Produit p2 = new Produit("456B", "Fauteuil", 129.39);
+        Produit p3 = new Produit("000CH", "Canapé", 399.79);
 
+        LigneFacture l1 = new LigneFacture(p1, 3);
+        LigneFacture l2 = new LigneFacture(p2, 2);
+        LigneFacture l3 = new LigneFacture(p3, 5);
         
+        System.out.println(l1.getProduit());
+        
+        System.out.println(l2.getQuantité());
+        
+        System.out.println("Facture :");
+        System.out.println(l1.toString());
+        System.out.println(l2.toString());
+        System.out.println(l3.toString());
+        
+       
         
 
     }

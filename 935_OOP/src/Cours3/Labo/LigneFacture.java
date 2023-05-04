@@ -44,6 +44,7 @@ public class LigneFacture {
         return quantité*prod.getPrix();
     }
     
+    @Override
     public String toString(){
         return prod.toString()+" Prix total HT : "+totalHT();
         
