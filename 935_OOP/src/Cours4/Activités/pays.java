@@ -26,21 +26,12 @@ public class pays {
         pays.add("Belgique");
         
         
-        System.out.println("Première liste de pays : ");
-        for(i = 0; i < pays.size(); i++){
-            System.out.println(pays.get(i));
-        }
+        afficher(pays);
         
         //Suppression des éléments de la liste
         pays.clear();
 
-        if(pays.isEmpty()){
-            System.out.println("La liste est vide");
-        } else {
-            for(i = 0; i < pays.size(); i++){
-                System.out.println(pays.get(i));
-            }
-        }
+        afficher(pays);
         
         pays.add("Ecosse");
         pays.add("Irlande");
@@ -66,12 +57,18 @@ public class pays {
         Collections.sort(pays);
         
         //Affichage de la deuxième liste de pays 
-        System.out.println("Deuxième liste de pays : ");
-        for(i = 0; i < pays.size(); i++){
-            System.out.println(pays.get(i));
+        afficher(pays);
+        
+        
+    }
+    
+    static void afficher(ArrayList pays){
+        if(!pays.isEmpty()){
+            for(int i = 0; i < pays.size(); i++){
+                System.out.println(pays.get(i));
+            }} else {
+            System.out.println("La liste est vide");
         }
-        
-        
     }
     
 }
