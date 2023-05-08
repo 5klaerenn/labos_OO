@@ -38,9 +38,5 @@ public class Rectangle {
         public int getLargeur()  {
               return largeur;
        }
-      
-        public String toString(){
-            return "longueur = "+ longueur+ " largeur = "+largeur;
-        }
-    
+          
 }

@@ -24,7 +24,7 @@ public class TabRectangle {
         tabRect[4] = new Rectangle(10, 15);
         
         for (Rectangle r : tabRect) {
-            System.out.println(r.toString());;
+            r.afficher();
         }
         
     }
