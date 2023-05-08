@@ -35,8 +35,12 @@ public class Rectangle {
 		return longueur;
 	}
 
-      public int getLargeur()  {
-            return largeur;
-     }
+        public int getLargeur()  {
+              return largeur;
+       }
+      
+        public String toString(){
+            return "longueur = "+ longueur+ " largeur = "+largeur;
+        }
     
 }
