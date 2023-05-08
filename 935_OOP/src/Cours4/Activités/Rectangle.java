@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Exemple2;
+package Cours4.Activités;
 
 /**
  *
@@ -11,7 +11,7 @@ package Exemple2;
  */
 public class Rectangle {
     
-    private int longueur;
+        private int longueur;
 	private int largeur ;
 	
 	public Rectangle(int longueur, int largeur) 
