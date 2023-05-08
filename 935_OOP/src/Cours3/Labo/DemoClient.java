@@ -21,6 +21,10 @@ public class DemoClient {
         System.out.println(c1);
         System.out.println(c2);
         
+        Client c3 = new Client();
+        
+
+        
     }
     
 }

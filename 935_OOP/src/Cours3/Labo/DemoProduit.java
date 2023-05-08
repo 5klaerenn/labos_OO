@@ -51,7 +51,7 @@ public class DemoProduit {
         
         System.out.println("p1 = p4 ?");
         if(p1.equals(p4)){
-            System.out.println("Les deux produits ont numéro de référence : " + p1.getNoRef());
+            System.out.println("Les deux produits ont le même numéro de référence : " + p1.getNoRef());
         } else {
             System.out.println("Les deux produits ont un numéro de référence différent");
         }
