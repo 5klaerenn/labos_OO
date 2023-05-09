@@ -41,15 +41,12 @@ public class JeuDeDes {
          }
     }
     
-    public int[] chaqueDe(){
-        int[] chaqueDe = new int[5];
-        
-        for(int i = 0; i < chaqueDe.length;i++){
+    public int[] chaqueDe(int[] tab){   
+        for(int i = 0; i < tab.length;i++){
             tabDe[i].lancerDe();
-            chaqueDe[i] = tabDe[i].getFacette();
+            tab[i] = tabDe[i].getFacette();
         }
-        
-        return chaqueDe;
+        return tab;
     }
     
 

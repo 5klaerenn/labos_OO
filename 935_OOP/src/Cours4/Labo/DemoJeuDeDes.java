@@ -27,7 +27,10 @@ public class DemoJeuDeDes {
         System.out.println(" ");
         
         System.out.println("Lancer du deuxième set :");
-        tabEach = ;
+        j2.chaqueDe(tabEach);
+        for(int i = 0; i < tabEach.length; i++){
+            System.out.println(tabEach[i]);
+        }
         System.out.println(" ");    
         
         System.out.println("Lancer du troisième set : ");
