@@ -37,24 +37,31 @@ public class JeuDeDes {
     public void lancerSet(){
          for(int i = 0; i < tabDe.length; i++) {
              tabDe[i].lancerDe();
+             System.out.print("Facette "+(i+1)+" : ");
              System.out.println(tabDe[i].getFacette());
          }
     }
     
     public int[] chaqueDe(int[] tab){   
-        for(int i = 0; i < tab.length;i++){
+        for(int i = 0; i < tab.length; i++){
             tabDe[i].lancerDe();
             tab[i] = tabDe[i].getFacette();
         }
         return tab;
     }
     
-
+    public int totalSum(int[] tab){
+        int sum = 0;
+        
+        for(int i = 0; i < tab.length; i++){
+            tabDe[i].lancerDe();
+            tab[i] = tabDe[i].getFacette();
+            System.out.print("Facette "+(i+1)+" : ");
+            System.out.println(tabDe[i].getFacette());
+            sum += tab[i];
+        }
+        System.out.print("Somme des facettes = ");
+        return sum;
+    }
     
-
-    
-
-    
-    
-
 }
