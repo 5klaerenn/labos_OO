@@ -14,7 +14,28 @@ public class DemoJeuDeDes {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        int tabFaces[] = {6, 18, 20, 12, 20};
+        int[] tabEach = new int[5];
+        
+        JeuDeDes j1 = new JeuDeDes();
+        JeuDeDes j2 = new JeuDeDes(20);
+        JeuDeDes j3 = new JeuDeDes(tabFaces);
+        
+        System.out.println("Lancer du premier set : ");
+        j1.lancerSet();
+        System.out.println(" ");
+        
+        System.out.println("Lancer du deuxième set :");
+        tabEach = ;
+        System.out.println(" ");    
+        
+        System.out.println("Lancer du troisième set : ");
+        j3.lancerSet();
+        System.out.println(" ");
+                
     }
+    
+
     
 }
