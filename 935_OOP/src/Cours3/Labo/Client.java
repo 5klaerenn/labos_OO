@@ -40,7 +40,7 @@ public class Client {
     }
     
     public String toString(){
-        return nom+" : "+tel;
+        return "Nom : "+nom+" - Téléphone : "+tel;
     }
     
     

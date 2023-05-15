@@ -105,12 +105,6 @@ public class Facture {
     public void sumTTC(){
         totalTTC = totalHT + montantTPS + montantTVQ;
     }   
-    
-    public String toString(){
-        
-        
-        
-        
-    }
-    
 }
+    
+   

@@ -16,8 +16,6 @@ public class DemoJeuDeDes {
     public static void main(String[] args) {
         
         int tabFaces[] = {6, 18, 20, 12, 20};
-        int[] tabEach = new int[5];
-        int[] tabSum = new int[5];
         
         JeuDeDes j1 = new JeuDeDes();
         JeuDeDes j2 = new JeuDeDes(20);
@@ -28,15 +26,15 @@ public class DemoJeuDeDes {
         System.out.println(" ");
         
         System.out.println("Lancer du deuxième set :");
-        j2.chaqueDe(tabEach);
-        for(int i = 0; i < tabEach.length; i++){
+        j2.chaqueDe(tabFaces);
+        for(int i = 0; i < tabFaces.length; i++){
             System.out.print("Facette "+(i+1)+" : ");
-            System.out.println(tabEach[i]);
+            System.out.println(tabFaces[i]);
         }
         System.out.println(" ");    
         
         System.out.println("Lancer du troisième set : ");
-        System.out.println(j3.totalSum(tabSum));
+        System.out.println(j3.totalSum(tabFaces));
         System.out.println(" ");
                 
     }

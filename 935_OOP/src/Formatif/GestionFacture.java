@@ -47,7 +47,8 @@ public class GestionFacture {
                     continuer = continuer();
                     break;
                 case 2 :
-                    if(f1.cpteLignes == artMax) {
+                    System.out.println(f1.getLigne());
+                    if(f1.getLigne() == artMax) {
                         System.out.println("Vous ne pouvez pas ajouter d'articles supplémentaires");
                     } else {
                         
@@ -110,7 +111,7 @@ public class GestionFacture {
         System.out.println(f1.getClient());
         System.out.println("--------------------------------------");
         
-        for(int i = 0; i < f1.cpteLignes; i++){
+        for(int i = 0; i < f1.getLigne(); i++){
             System.out.println(tab[i]);
         }
         
