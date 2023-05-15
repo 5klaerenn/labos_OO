@@ -23,7 +23,19 @@ public class Beatles
       band.addElement ("George");
 
       System.out.println (band);
-
+      
+      //Ajout de Ringo
+      
+      String nouveauP = new String("Ringo");
+      band.insertElementAt(nouveauP, 2);
+      System.out.println(band);
+       
+      // Suppression de Pete en cherchant son indice
+      int indice;
+      indice = band.indexOf("Pete");
+      band.removeElementAt(indice);
+      System.out.println(band);
+      
       
    }
 }
