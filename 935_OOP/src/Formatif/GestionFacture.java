@@ -7,7 +7,7 @@ package Formatif;
 import Cours3.Labo.Client;
 import Cours3.Labo.LigneFacture;
 import Cours3.Labo.Produit;
-import java.awt.PageAttributes;
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -47,36 +47,11 @@ public class GestionFacture {
                     continuer = continuer();
                     break;
                 case 2 :
-                    System.out.println(f1.getLigne());
-                    if(f1.getLigne() == artMax) {
-                        System.out.println("Vous ne pouvez pas ajouter d'articles supplémentaires");
-                    } else {
-                        
-                        String noRef, nomP;
-                        double prix;
-                        int qty;
-                        
-                        System.out.println("Entrez le numéro de l'article");
-                        noRef = sc.nextLine();
-                        System.out.println("Entrez le nom de l'article");
-                        nomP = sc.nextLine();
-                        System.out.println("Entrez le prix unitaire de l'article");
-                        prix = estDouble();
-                        System.out.println("Entrez la quantité commandée");
-                        qty = estEntierPositif();
-                        
-                        Produit p = new Produit(noRef, nomP, prix);
-                        LigneFacture l = new LigneFacture(p, qty);
-                        
-                        f1.ajouterLigne(l);
-                    }
+                    ajouter(f1, artMax);
                     continuer = continuer();
                     break;
             }
-        } while(continuer);
-           
-        
-        
+        } while(continuer);    
     }
     
     public static int menu(){      
@@ -93,41 +68,39 @@ public class GestionFacture {
         return choix ;
     }
     
-    static void afficher(Facture f1){
-        
-        f1.sumHT();
-        f1.sumTPS();
-        f1.sumTVQ();
-        f1.sumTTC();
-        
-        afficherTab(f1);
-    } 
-    
-    static void afficherTab(Facture f1){
-        
-        LigneFacture[] tab = f1.getLigneFact();
-        
-        System.out.println("=============  FACTURE  ============= ");
-        System.out.println(f1.getClient());
-        System.out.println("--------------------------------------");
-        
-        for(int i = 0; i < f1.getLigne(); i++){
-            System.out.println(tab[i]);
-        }
-        
-        System.out.println("--------------------------------------");
-        System.out.println("Montant HT :" + f1.getHT());
-        System.out.println("Montant TPS :" + f1.getTPS());
-        System.out.println("Montant TVQ :" + f1.getTVQ());
-        System.out.println("Montant total :" + f1.getTTC());
-        System.out.println("=======================================");
-        
+    static void afficher(Facture f){
+        System.out.println(f.toString());
     }
     
+    static void ajouter(Facture f1, int artMax){
+        Scanner sc = new Scanner(System.in);
+
+        if(f1.cpteLignes == artMax) {
+            System.out.println("Vous ne pouvez pas ajouter d'articles supplémentaires");
+            } else {
+
+                String noRef, nomP;
+                double prix;
+                int qty;
+
+                System.out.println("Entrez le numéro de l'article");
+                noRef = sc.nextLine();
+                System.out.println("Entrez le nom de l'article");
+                nomP = sc.nextLine();
+                System.out.println("Entrez le prix unitaire de l'article");
+                prix = estDouble();
+                System.out.println("Entrez la quantité commandée");
+                qty = estEntierPositif();
+
+                Produit p = new Produit(noRef, nomP, prix);
+                LigneFacture l = new LigneFacture(p, qty);
+
+                f1.ajouterLigne(l);
+            }
+    }
+     
     static boolean continuer(){
-        System.out.println("Voulez-vous continuer ?") ;
-        System.out.println("1 : Oui") ;
-        System.out.println("2 : Non") ;
+        System.out.println("Continuer ? 1: Oui / 2: Non") ;
         
         int choix = estEntierPositif() ;
         
@@ -158,12 +131,15 @@ public class GestionFacture {
        }
     
     static double estDouble(){    
+        
         Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
+        
         double test;
 
            do{
                 while(!sc.hasNextDouble()){
-                    System.out.println("Erreur, entrez un entier positif");
+                    System.out.println("Erreur dans le nombre entré");
                     sc.next();
                 } test = sc.nextDouble();
            } while (test < 0);

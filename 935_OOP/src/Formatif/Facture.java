@@ -50,7 +50,7 @@ public class Facture {
         this.tabLignes = new LigneFacture[n];
         cpteLignes = 0;
     }
-    
+              
     public Client getClient(){
         return client;
     }
@@ -83,28 +83,45 @@ public class Facture {
         }
     }
     
-    public void ajouterLigne(LigneFacture l){
-            tabLignes[cpteLignes] = l;
+    public void ajouterLigne(LigneFacture ligne){
+            tabLignes[cpteLignes] = ligne;
             cpteLignes ++;
     }
     
-    public void sumHT(){
+    public void calculer(){
         for(int i = 0; i<cpteLignes; i++){
-            totalHT += tabLignes[i].totalHT();
-        } 
-    }
-    
-    public void sumTPS(){
+            totalHT = totalHT + tabLignes[i].totalHT();
+        }
+        
         montantTPS = (double) Math.round((totalHT * TPS) * 100)/100;
-    }
-    
-    public void sumTVQ(){
         montantTVQ = (double) Math.round((totalHT * TVQ) * 100)/100;
+        
+        totalTTC = (double) Math.round((totalHT + montantTPS + montantTVQ) * 100)/100;
     }
     
-    public void sumTTC(){
-        totalTTC = totalHT + montantTPS + montantTVQ;
-    }   
+    public String toString(){
+        
+        calculer();
+        
+        String s = new String();
+        
+        s = "=============  FACTURE  ============= \n";
+        s += client + "\n";
+        s += "-------------------------------------- \n";
+        for(int i = 0; i < cpteLignes; i++){
+            s += tabLignes[i]+"\n";
+        }
+        s += "\n--------------------------------------";
+        s += "\nMontant HT : " + totalHT;
+        s += "\nMontant TPS : " + montantTPS;
+        s += "\nMontant TVQ : " + montantTVQ;
+        s += "\nMontant total : " + totalTTC;
+        s += "\n=======================================";
+        
+        return s;
+        
+    }
+    
 }
     
    
