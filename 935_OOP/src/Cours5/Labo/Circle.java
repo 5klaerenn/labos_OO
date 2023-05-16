@@ -12,6 +12,7 @@ public class Circle extends Shape {
     
     final static double PI = 3.141592564 ;
     private double radius ;
+    private double surface;
 
     public Circle() {
         radius = 0 ;
@@ -22,9 +23,42 @@ public class Circle extends Shape {
         radius = r ;
     }
     
+    public void setRadius(double r){
+        this.radius = r;
+    }
+    
+    public double getRadius(){
+        return radius;
+    }
+    
+    public double getSurface(){
+        return surface;
+    }
+    
+    public double calculerSurface(){
+        return surface = radius * radius * PI;
+    }
+    
+    public boolean isBigger(Circle c){
+        return this.equals(c);
+    }
+    
     public String toString() {
-        return super.toString() + " Rayon : " + radius ;
+        return super.toString() + " Rayon : " + radius + " Surface : " + surface;
     }
 
+    public boolean equals(Object obj){
+       if(obj instanceof Circle){
+           
+           Circle autre = (Circle) obj;
+           
+           if(this.surface == autre.surface){
+              return true;
+           } else{
+                   return false; 
+                   }
+       } else 
+           return false;
+   }
     
 }
