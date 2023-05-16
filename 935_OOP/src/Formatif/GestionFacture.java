@@ -32,10 +32,10 @@ public class GestionFacture {
         System.out.println("Entrez le numéro de téléphone du client ");
         tel = sc.nextLine();
         Client c1 = new Client(nom, tel);
-        
+           
         System.out.println("Combien d'articles maximum sur la facture ?");
         artMax = estEntierPositif();
-        
+
         Facture f1 = new Facture(c1, artMax);
         
         do {
