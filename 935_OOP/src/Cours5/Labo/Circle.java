@@ -44,6 +44,7 @@ public class Circle extends Shape {
     }
     
     public String toString() {
+        calculerSurface();
         return super.toString() + " Rayon : " + radius + " Surface : " + surface;
     }
 

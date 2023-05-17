@@ -28,6 +28,7 @@ public class Cylinder extends Circle {
     }
     
     public String toString() {
+        calculerVolume();
         return super.toString() + " Volume : " + volume;
     }
         
