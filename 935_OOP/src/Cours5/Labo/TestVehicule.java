@@ -45,11 +45,7 @@ public class TestVehicule {
         System.out.println("Prix courant des véhicules : ");
         System.out.print("Avion v1 : " + v1.getPrixCourant()+" \n");
         System.out.print("Voiture v2 : " + v2.getPrixCourant()+" \n");
-        System.out.print("Voiture v3 : " + v3.getPrixCourant()+" \n");
-
-        
-        
-        
+        System.out.print("Voiture v3 : " + v3.getPrixCourant()+" \n");    
 
     }
     
