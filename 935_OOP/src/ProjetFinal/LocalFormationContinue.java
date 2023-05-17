@@ -10,4 +10,20 @@ package ProjetFinal;
  */
 public class LocalFormationContinue extends Local {
     
+    private int numEtape;
+    
+    public LocalFormationContinue(int n, int e, int hD, int hF, int numEtape){
+        super(n, e, hD, hF);
+        this.numEtape = numEtape;
+    }
+    
+    public String toString(){
+        String s; 
+        
+        s = super.toString();
+        s += "Formation continue (étape " + numEtape + ")";
+        
+        return s;
+    }
+    
 }

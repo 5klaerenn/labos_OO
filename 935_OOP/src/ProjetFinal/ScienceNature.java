@@ -14,4 +14,8 @@ public class ScienceNature extends Departement {
         super(n);
     }
     
+    public String toString(){
+        return "Département Science Nature ";
+    }
+    
 }

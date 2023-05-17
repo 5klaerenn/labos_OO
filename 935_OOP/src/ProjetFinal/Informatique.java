@@ -14,4 +14,8 @@ public class Informatique extends Departement {
         super(n);
     }
     
+    public String toString(){
+        return "Département Informatique";
+    }
+    
 }

@@ -14,4 +14,8 @@ public class SciencesHumaines extends Departement {
         super(n);
     }
     
+    public String toString(){
+        return "Département Sciences Humaines";
+    }
+    
 }

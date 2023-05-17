@@ -20,7 +20,4 @@ public class Departement {
         return this.nom;
     }
     
-    public String toString(){
-        return nom;
-    }
 }
