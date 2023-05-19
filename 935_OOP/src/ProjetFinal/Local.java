@@ -40,6 +40,8 @@ public class Local {
         return heureFin;
     }
     
+    
+    
     public String toString(){
         return "Local : " + etage + "-" + numero + "\n" 
                 + "Reservé : " + reservation + "\n";

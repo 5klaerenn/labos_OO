@@ -15,9 +15,9 @@ public class TestReservation {
      */
     public static void main(String[] args) {
 
-        Departement d1 = new Informatique("info");
-        Departement d2 = new SciencesHumaines("SH");
-        Departement d3 = new ScienceNature("ScienceNat");
+        Departement d1 = new Departement("Informatique");
+        Departement d2 = new Departement("Sciences Humaines");
+        Departement d3 = new Departement("Science Nature");
         
         System.out.println(d1);
         System.out.println(d2);
