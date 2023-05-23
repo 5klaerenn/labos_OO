@@ -15,16 +15,16 @@ public class TestPersonnes {
      */
     public static void main(String[] args) {
 
-        Personne p1 = new Manager("Kelso", "Bob", 500, "Cobol");
-        Personne p2 = new Manager("Cox", "Perry", 475, "QA");
-        Personne p3 = new Developpeur("Dorian", "John", 350, "JAVA");
-        Personne p4 = new Developpeur("Reid", "Eliott", 325, "Python");
+        Manager m1 = new Manager("Kelso", "Bob", 500, "Cobol");
+        Manager m2 = new Manager("Cox", "Perry", 475, "QA");
+        Developpeur d1 = new Developpeur("Dorian", "John", 350, "JAVA");
+        Developpeur d2 = new Developpeur("Reid", "Eliott", 325, "Python");
         
-        ((Manager) p1).afficher();
-        ((Manager) p2).afficher();
+        m1.afficher();
+        m2.afficher();
         
-        ((Developpeur) p3).afficher();
-        ((Developpeur) p4).afficher();        
+        d1.afficher();
+        d2.afficher();        
 
     }
     

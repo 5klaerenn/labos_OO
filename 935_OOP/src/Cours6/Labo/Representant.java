@@ -9,6 +9,25 @@ package Cours6.Labo;
  *
  * @author Sklaerenn
  */
-public class Representant {
+public class Representant extends Commercial {
+    
+    private final double pourcentageRep = 0.2;
+    private final int bonusRep = 800;
+    
+    public Representant(String n, String p, int a, String e, double ca){
+        super(n, p, a, e, ca);
+    }
+
+    @Override
+    public String getTitre() {
+        return "Le représentant ";
+    }
+    
+    @Override
+    public double calculerSalaire() {
+        return (getChiffreAff() * 0.2) + bonusRep;
+    }
+    
+    
 
 }

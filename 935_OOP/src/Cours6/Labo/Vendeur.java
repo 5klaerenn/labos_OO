@@ -22,6 +22,13 @@ public class Vendeur extends Commercial {
     public String getTitre() {
         return "Le vendeur ";
     }
+
+    @Override
+    public double calculerSalaire() {
+        return (getChiffreAff() * 0.2) + bonusVendeur;
+    }
+    
+    
     
     
     
