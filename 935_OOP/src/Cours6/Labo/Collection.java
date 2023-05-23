@@ -50,11 +50,7 @@ public class Collection {
     public static void afficherValeurTotale(Ustensile[] us) {
         double somme = 0;
         for (int i = 0; i < us.length; i++) {
-            if(us[i] instanceof AssietteRonde || us[i] instanceof Cuillere){
-                somme += us[i].calculerValeur(CURRENT_YEAR);
-            } else if (us[i] instanceof AssietteCarree){
-                somme += (us[i].calculerValeur(CURRENT_YEAR)) * 5;
-            }
+            somme += us[i].calculerValeur(CURRENT_YEAR);
         }
         System.out.println("Valeur totale de la collection : " + somme);
     }

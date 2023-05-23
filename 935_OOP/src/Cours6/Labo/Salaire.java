@@ -35,7 +35,7 @@ public class Salaire {
     }
     
     public static void salaireMoyen(Employe[] personnels){
-        int sum = 0;
+        double sum = 0;
         
         for(int i = 0; i < personnels.length; i++){
             sum += personnels[i].calculerSalaire();

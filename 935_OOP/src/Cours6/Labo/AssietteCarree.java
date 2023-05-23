@@ -21,5 +21,9 @@ public class AssietteCarree extends Assiette {
     public double calculerSurface(){
         return cote * cote;
     };
+    
+    public int calculerValeur(int anneeActuelle){
+        return 5 * super.calculerValeur(anneeActuelle);
+    }
 
 }

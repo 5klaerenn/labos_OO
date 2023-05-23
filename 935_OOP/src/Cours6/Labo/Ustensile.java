@@ -23,14 +23,12 @@ public abstract class Ustensile {
     
     
     public int calculerValeur(int anneeActuelle){
-        int valeur;
+        int valeur = 0;
         int age = anneeActuelle - annee;
         
-        if(age < 50){
-            valeur = 0; 
-            } else {
-                valeur = age - 50;
-            }
+        if(age > 50){
+            valeur = age - 50;
+        }
         return valeur;
     };
     
