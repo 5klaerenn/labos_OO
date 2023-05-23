@@ -8,7 +8,7 @@ package ProjetFinal;
  *
  * @author Sklaerenn
  */
-public class Local {
+public abstract class Local {
     
     private int numero;
     private int etage;
@@ -40,10 +40,15 @@ public class Local {
         return heureFin;
     }
     
+    public void setReservation(boolean test){
+        this.reservation = test;
+    }
     
-    
+    @Override
     public String toString(){
         return "Local : " + etage + "-" + numero + "\n" 
                 + "Reservé : " + reservation + "\n";
     }
+    
+    public abstract boolean reserver(int heureDeb, int heureFin); 
 }
