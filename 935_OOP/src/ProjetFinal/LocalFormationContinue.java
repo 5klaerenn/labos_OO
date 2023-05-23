@@ -34,7 +34,7 @@ public class LocalFormationContinue extends Local {
     public boolean reserver(int heureDeb, int heureFin){
         boolean test = true;
         
-        if(heureDeb >= heureMini && heureFin <= heureMax){
+        if(heureDeb >= heureMini && heureFin <= heureMax && heureDeb < heureFin){
             test = true;
         } else {
             test = false;
