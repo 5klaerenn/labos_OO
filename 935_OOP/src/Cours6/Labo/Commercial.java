@@ -9,7 +9,7 @@ package Cours6.Labo;
  *
  * @author Sklaerenn
  */
-public class Commercial extends Employe {
+public abstract class Commercial extends Employe {
 
     private double chiffreAff;
     
@@ -22,8 +22,6 @@ public class Commercial extends Employe {
         return chiffreAff;
     }
     
-    public double calculerSalaire(){
-        return 0.0;
-    }
+    public abstract double calculerSalaire();
         
 }

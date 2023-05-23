@@ -13,12 +13,12 @@ import java.net.IDN;
  */
 public abstract class Personne {
     
-    private int id;
-    private String nom;
-    private String prenom;
-    private String mail;
-    private String telephone;
-    private double salaire;
+    protected int id;
+    protected String nom;
+    protected String prenom;
+    protected String mail;
+    protected String telephone;
+    protected double salaire;
     
     public Personne(int i, String n, String p, String m, String t, double s){
         this.id = i;
