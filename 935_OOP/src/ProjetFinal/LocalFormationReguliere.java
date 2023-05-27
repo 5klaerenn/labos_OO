@@ -22,16 +22,7 @@ public class LocalFormationReguliere extends Local {
         this.session = session;
         this.departement = dep;
     }
-    
-//    public int getHeureDebut(){
-//        return super.getHeureDebut();
-//    }
-//    
-//    public int getHeureFin(){
-//        return super.getHeureFin();
-//    }
-//    
-//    
+      
     @Override
     public String toString(){
         String s; 
