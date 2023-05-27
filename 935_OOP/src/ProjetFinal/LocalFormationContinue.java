@@ -20,6 +20,14 @@ public class LocalFormationContinue extends Local {
         this.numEtape = numEtape;
     }
     
+//    public int getHeureDebut(){
+//        return super.getHeureDebut();
+//    }
+//    
+//    public int getHeureFin(){
+//        return super.getHeureFin();
+//    }
+//    
     @Override
     public String toString(){
         String s; 

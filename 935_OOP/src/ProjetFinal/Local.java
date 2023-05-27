@@ -14,7 +14,6 @@ public abstract class Local {
     private int etage;
     private int heureDeb;
     private int heureFin;
-    private Departement departement;
     private boolean reservation; 
     
     public Local(int n, int e, int hD, int hF){
@@ -46,8 +45,21 @@ public abstract class Local {
     
     @Override
     public String toString(){
-        return "Local : " + etage + "-" + numero + "\n" 
-                + "Reservé : " + reservation + "\n";
+        String s; 
+        String resultat; 
+        
+        if(reservation){
+            resultat = "Oui";
+        } else {
+            resultat = "Non";
+        }
+        
+        s = "========================================== \n";
+        s += "Local : " + etage + "-" + numero + "\n";
+        s += "Reservé : " ; 
+        s += resultat + "\n";
+                   
+        return s;
     }
     
     public abstract boolean reserver(int heureDeb, int heureFin); 

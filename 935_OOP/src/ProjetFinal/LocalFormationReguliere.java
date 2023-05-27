@@ -12,6 +12,7 @@ public class LocalFormationReguliere extends Local {
     
     private String session; 
     private Departement departement;
+    
     private final int heureMini = 8;
     private final int heureMiniInfo = 15; 
     private final int heureMax = 18; 
@@ -22,6 +23,15 @@ public class LocalFormationReguliere extends Local {
         this.departement = dep;
     }
     
+//    public int getHeureDebut(){
+//        return super.getHeureDebut();
+//    }
+//    
+//    public int getHeureFin(){
+//        return super.getHeureFin();
+//    }
+//    
+//    
     @Override
     public String toString(){
         String s; 
