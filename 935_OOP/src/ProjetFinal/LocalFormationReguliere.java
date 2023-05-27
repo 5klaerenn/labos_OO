@@ -22,6 +22,10 @@ public class LocalFormationReguliere extends Local {
         this.session = session;
         this.departement = dep;
     }
+    
+    public Departement getDepartement(){
+        return departement;
+    }
       
     @Override
     public String toString(){
