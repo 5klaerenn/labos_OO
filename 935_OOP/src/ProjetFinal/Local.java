@@ -39,6 +39,10 @@ public abstract class Local {
         return heureFin;
     }
     
+    public boolean getReservation(){
+        return reservation;
+    }
+    
     public void setReservation(boolean test){
         this.reservation = test;
     }
