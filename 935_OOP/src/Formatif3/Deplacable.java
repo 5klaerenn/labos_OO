@@ -11,6 +11,6 @@ package Formatif3;
 public interface Deplacable {
     
     public abstract double calculerDistance();
-    public abstract double deplacer(double x, double y);
+    public abstract void deplacer(double x, double y);
     
 }

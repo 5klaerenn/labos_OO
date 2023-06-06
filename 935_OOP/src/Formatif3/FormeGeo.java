@@ -21,6 +21,23 @@ public abstract class FormeGeo implements Deplacable {
         this.positionY = y;
     }
     
+    
+    public double getPositionX() {
+        return positionX;
+    }
+    
+    public double getPositionY() {
+        return positionY;
+    }
+    
+    public void setPositionX(double x){
+        this.positionX = x;
+    }
+    
+    public void setPositionY(double y){
+        this.positionY = y;
+    }
+    
     public abstract double calculerAire();
     
     public String toString(){
