@@ -3,8 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Cours9.Activites;
-
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JList;
@@ -16,7 +14,7 @@ import javax.swing.event.*;
  * @author Asma
  */
 
-public class Liste extends JFrame  {
+public class Liste extends JFrame implements ListSelectionListener {
     private String[] data = {"Objet", "Classe", "Heritage", "Interface"};
     private JPanel p;
     private JList myList = new JList (data);
@@ -31,6 +29,16 @@ public class Liste extends JFrame  {
         myList.setBackground(Color.cyan);
         p.add(myList);
         this.add(p);
+        
+        myList.addListSelectionListener(this);
+        
+    }
+    
+    public void valueChanged(ListSelectionEvent e){
+        
+        if(e.getValueIsAdjusting()){
+            System.out.println("Indice de l'élément sélectionné : "+ myList.getSelectedIndex() + " // Valeur de l'élément sélectionné : "+ myList.getSelectedValue());
+        }
     }
 
    
